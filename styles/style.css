@@ -200,7 +200,7 @@ main {
 
 .row-items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     align-items: center;
     text-align: center;
@@ -210,16 +210,25 @@ main {
 .container-box {
     border: 1px solid rgba(41, 206, 246, 0.2);
     background: rgba(41, 206, 246, 0.05);
-    padding: 50px 10px;
+    padding: 40px 10px;
     border-radius: 15px;
     transition: all 0.2s ease 0s;
     cursor: pointer;
+    max-height: 650px;
+}
+
+.container-box p {
+    margin-top: 15px;
 }
 
 .container-box:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
     border: 1px solid transparent;
     transform: translateY(-10px);
+}
+
+.container-review img {
+    width: 25%;
 }
 
 .container-img img {
@@ -332,14 +341,17 @@ main {
 }
 
 /* choose us */
-#choose-us h2 {
+#choose-us h2,
+.section-heading h2 {
     text-align: center;
 }
 
-.choose-us-text {
+.choose-us-text,
+.discount-text {
     color: rgba(19, 19, 24, 0.7);
     text-align: center;
     margin: 24px 0px;
+    padding: 0px 200px;
 }
 
 .choose-container {
@@ -489,6 +501,80 @@ main {
     outline: none;
 }
 
+/* Discount */
+#disc {
+    margin-top: 100px;
+}
+
+.discount-container {
+    margin-top: 100px;
+    padding: 50px;
+    border-radius: 16px;
+    margin: 30px 0;
+}
+
+.discount-bg {
+    background: url("../images/Group\ 39.png") no-repeat center center / cover;
+}
+
+.discount-bg-2 {
+    background: url("../images/Group\ 40.png") no-repeat center center / cover;
+}
+
+.discount-card {
+    padding: 40px;
+    width: 50%;
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2.5px);
+}
+
+.discount-card-single {
+    margin-left: auto;
+}
+
+.discount-card ul {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.discount-card ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.discount-description {
+    color: #FF5400;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.disc-button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-primary-d {
+    padding: 14px 5px;
+}
+
+.section-description {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #5A5A5D;
+}
+
+.section-description-two {
+    color: #5A5A5D;
+}
+
 .btn-primary-n {
     color: #FFF;
     font-size: 1rem;
@@ -513,6 +599,28 @@ main {
     width: 250px;
 }
 
+/* perfect place styles */
+#perfect-place {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3.25rem;
+    margin-top: 100px;
+}
+
+.place-container li {
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--color-plate5);
+    list-style-position: inside;
+}
+
+.place-video video {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* newsletter */
 .newsletter-img button {
     font-weight: 400;
     transform: rotate(-25deg);
@@ -570,7 +678,8 @@ main {
     #destination h2,
     .popular-tour-content h2,
     #choose-us h2,
-    .services-h h2 {
+    .services-h h2,
+    .place-container h2 {
         font-size: 1.5rem;
     }
 
@@ -702,5 +811,27 @@ main {
     .services-h h2,
     .services-h p {
         text-align: center;
+    }
+
+    #perfect-place {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 45px;
+    }
+
+    .place-video video {
+        width: 100%;
+    }
+
+    .discount-container {
+        padding: 250px 10px 10px 10px;
+    }
+
+    .discount-card {
+        width: 100%;
+    }
+
+    .choose-us-text,
+    .discount-text {
+        padding: 0px 10px;
     }
 }
